@@ -7,7 +7,7 @@ on:
 jobs:
   check-kirby-ingest:
     runs-on: ubuntu-latest
-    if: contains(github.event.review.comment.body, '/status rollup')
+    if: contains(github.event.review.body, '/status rollup')
     steps:
       - name: Check Out Code
         uses: actions/checkout@v4
